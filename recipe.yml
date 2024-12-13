@@ -1,0 +1,8 @@
+apiVersion: v1
+name: ktjst-c-recipe
+version: v0.0.0
+description: Description about what the recipe is used for and what it contains. For example tech stack, cloud environments, tools
+initHelp: 'The recipe user will see this message after the recipe execution. Templating is supported, for example: The recipe name is {{ .Recipe.Name }}.'
+vars:
+  - name: MY_VAR
+    default: Hello World!
