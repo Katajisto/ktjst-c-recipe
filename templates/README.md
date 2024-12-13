@@ -1,1 +1,1 @@
-{{ .Variables.MY_VAR }}
+

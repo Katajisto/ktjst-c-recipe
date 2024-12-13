@@ -12,4 +12,4 @@ fi
 
 CFLAGS="-I../src -Wall -std=c11 -pedantic `pkg-config sdl3 --cflags --libs`  $GLFLAG -lm -O3 -g"
 
-gcc main.c microui_renderer.c microui.c $CFLAGS
+gcc main.c $CFLAGS
