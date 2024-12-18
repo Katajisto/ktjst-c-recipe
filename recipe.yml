@@ -1,12 +1,30 @@
 apiVersion: v1
 name: ktjst-c-recipe
 version: v0.0.1
-description: Description about what the recipe is used for and what it contains. For example tech stack, cloud environments, tools
-initHelp: 'The recipe user will see this message after the recipe execution. Templating is supported, for example: The recipe name is {{ .Recipe.Name }}.'
+description: A recipe for starting a C project my way.
+initHelp: 'Please run "chmod +x ./s/init.sh && ./s/init.sh" to download large dependencies and inititalize the project.'
 vars:
-  - name: INCLUDED
-    description: Select which libs to include in the project
-    multi: true
+  - name: PROJECT_NAME
+    description: Name for the project.
+  - name: C_STANDARD
+    description: Which C version to use. Libs are not guaranteed to work with low versions.
     options:
-      - BZ4X
-    
+      - 89
+      - 99
+      - 11
+      - 17
+      - 23
+  - name: INCLUDE_LIBS
+    description: Which libs to include in the project.
+    multi: true
+    optional: true
+    options:
+      - ktjst
+      - microui
+      - raylib
+  - name: STARTER_SRC
+    description: Which starter source template do you want to use?
+    options:
+      - hello world
+      - raylib basic usage
+      

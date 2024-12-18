@@ -1,3 +1,4 @@
+{{if .Variables.INCLUDE_LIBS | has "ktjst"}}
 #ifndef BZ4X
 #define BZ4X
 #include <math.h>
@@ -130,3 +131,4 @@ unsigned char* Bz4xDecode(unsigned char* bz4xfile, int insize, int* outsize, int
 
 #endif
 #endif
+{{ end }}

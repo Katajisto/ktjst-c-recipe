@@ -1,3 +1,4 @@
+{{if .Variables.INCLUDE_LIBS | has "microui"}}
 /*
 ** Copyright (c) 2024 rxi
 **
@@ -1206,3 +1207,4 @@ void mu_end_panel(mu_Context *ctx) {
   mu_pop_clip_rect(ctx);
   pop_container(ctx);
 }
+{{ end }}
